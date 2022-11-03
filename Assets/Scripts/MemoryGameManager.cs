@@ -16,7 +16,6 @@ public class MemoryGameManager : MonoBehaviour
     void Start()
     {
         this.memoryButtons = GameObject.FindGameObjectsWithTag("MemoryButton");
-        print("MEMORY" + memoryButtons.Length);
     }
 
     void Update()
@@ -26,26 +25,26 @@ public class MemoryGameManager : MonoBehaviour
 
     public void StartGame()
     {
-        print("Game started");
+        ClearGameState();
         StartRound();
-        // ChangeObjectMaterial(this.memoryButtons[GenerateRandomIndex()]);
     }
 
     private void StartRound()
     {
-        print("ROUND STARTED");
+        this.userRoundButtons = new List<GameObject>();
+        var currentButton = this.memoryButtons[GenerateRandomIndex()];
+        this.currentRoundButtons.Add(currentButton);
+
+        StartCoroutine(PresentPreviousObject());
+    }
+
+    private IEnumerator PresentPreviousObject()
+    {
         for (int i = 0; i < this.currentRoundButtons.Count; i++)
         {
             StartCoroutine(DisaplyPreviousObject(currentRoundButtons[i]));
+            yield return new WaitForSeconds(1.5f);
         }
-
-        // int current = 0;
-        // while (current < this.roundCounter)
-        // {
-
-        StartCoroutine(AddObjectToRound());
-        // current++;
-        // }
     }
 
     private IEnumerator DisaplyPreviousObject(GameObject gameObject)
@@ -53,14 +52,6 @@ public class MemoryGameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         ChangeObjectMaterial(gameObject);
         yield return new WaitForSeconds(1);
-    }
-
-    private IEnumerator AddObjectToRound()
-    {
-        yield return new WaitForSeconds(1);
-        var currentButton = this.memoryButtons[GenerateRandomIndex()];
-        this.currentRoundButtons.Add(currentButton);
-        ChangeObjectMaterial(currentButton);
     }
 
     public void UserMove(GameObject gameObject)
@@ -71,11 +62,20 @@ public class MemoryGameManager : MonoBehaviour
         {
             if (CheckRoundResult())
             {
+                print("Next round");
                 StartRound();
                 return;
             }
-            print("Loser");
+
+            print("Game over");
+            ClearGameState();
         }
+    }
+
+    private void ClearGameState()
+    {
+        this.currentRoundButtons = new List<GameObject>();
+        this.userRoundButtons = new List<GameObject>();
     }
 
     private bool CheckRoundResult()
@@ -114,6 +114,5 @@ public class MemoryGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         gameObject.GetComponentInChildren<MeshRenderer>().material.color = defaultColor;
-        print("DEFAULT");
     }
 }
