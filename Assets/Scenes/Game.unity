@@ -367,24 +367,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (9)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e0413dfaa4731ed4e909f13347ee8afd, type: 2}
-=======
-    - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0413dfaa4731ed4e909f13347ee8afd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &120325602 stripped
@@ -1076,12 +1068,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94313e563929cb3499e3989be338a213, type: 3}
---- !u!1 &333149123 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1037460293}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &337772906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1483,19 +1469,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (4)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a325093b1a0e79d4ca215025ea31779c, type: 2}
-=======
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a325093b1a0e79d4ca215025ea31779c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &353247756 stripped
@@ -2488,19 +2471,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (3)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 29940930310512443bc64ed8d57ce902, type: 2}
-=======
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 29940930310512443bc64ed8d57ce902, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &566807438 stripped
@@ -3366,16 +3346,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
-<<<<<<< HEAD
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.size
-=======
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
-<<<<<<< HEAD
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -3388,30 +3363,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: ButtonController, Assembly-CSharp
-=======
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 456607604}
-    - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UserMove
-      objectReference: {fileID: 0}
-    - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MemoryGameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 333149123}
-    - target: {fileID: 5554750218247024771, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
       objectReference: {fileID: 0}
     - target: {fileID: 9042668409113257174, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
@@ -3483,19 +3434,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (2)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8ca98b502efb4e249933f41dc91419c3, type: 2}
-=======
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ca98b502efb4e249933f41dc91419c3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &1037460294 stripped
@@ -5023,24 +4971,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (8)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9a0e248e810f7504cbbf597fc9f503c1, type: 2}
-=======
-    - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a0e248e810f7504cbbf597fc9f503c1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &1511408785 stripped
@@ -6793,24 +6733,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (7)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fe6b81bc613b0b0479ad15743afff7d5, type: 2}
-=======
-    - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe6b81bc613b0b0479ad15743afff7d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &1866168623 stripped
@@ -7167,19 +7099,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeButton (5)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f4d55607908f6f94a93e7488eabc3536, type: 2}
-=======
     - target: {fileID: 9042668409113257176, guid: 7b404dd0943b22143b140f9380473b8c,
         type: 3}
       propertyPath: m_TagString
       value: MemoryButton
       objectReference: {fileID: 0}
->>>>>>> d1a99517096ea471544b8d2d874b3e6073e5576e
+    - target: {fileID: 9042668410406561756, guid: 7b404dd0943b22143b140f9380473b8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f4d55607908f6f94a93e7488eabc3536, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b404dd0943b22143b140f9380473b8c, type: 3}
 --- !u!4 &2111101926 stripped
