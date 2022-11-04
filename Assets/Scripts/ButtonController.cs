@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private MemoryGameManager gameManager;
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        this.gameManager = GameObject.FindObjectOfType<MemoryGameManager>();
     }
 
     public void Debug()
     {
         print("Selected");
+    }
+
+    void OnMouseDown()
+    {
+        this.gameManager.UserMove(gameObject);
     }
 }
