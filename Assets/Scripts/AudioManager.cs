@@ -9,9 +9,20 @@ public class AudioManager : MonoBehaviour
 
     private static AudioManager instance;
 
+    private AudioSource[] memoryButtonSounds = new AudioSource[8];
+
     private void Awake()
     {
         instance = this;
+
+        memoryButtonSounds[0] = doNode;
+        memoryButtonSounds[1] = reNode;
+        memoryButtonSounds[2] = miNode;
+        memoryButtonSounds[3] = faNode;
+        memoryButtonSounds[4] = solNode;
+        memoryButtonSounds[5] = laNode;
+        memoryButtonSounds[6] = siNode;
+        memoryButtonSounds[7] = dooNode;
     }
 
     public static AudioManager GetInstance()
@@ -84,5 +95,10 @@ public class AudioManager : MonoBehaviour
     public void PlayDooNode()
     {
         dooNode.Play();
+    }
+
+    public AudioSource[] GetMemoryButtonSounds()
+    {
+        return memoryButtonSounds;
     }
 }
