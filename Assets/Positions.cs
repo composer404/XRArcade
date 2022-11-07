@@ -31,6 +31,7 @@ public class Positions : MonoBehaviour
     {
         for (int i = 0; i < cards.Length; i++)
         {
+            cards[i].GetComponent<FruitCard>().enabled = false;
             cards[i].transform.position = positions[i];
         }
     }
@@ -86,7 +87,19 @@ public class Positions : MonoBehaviour
         for (int i = 0; i < cards.Length; i++)
         {
             cards[i].transform.rotation = Quaternion.Lerp(startingPoint, Quaternion.Euler(-180,180,0),curve.Evaluate(percentage));
+             
+       }
+
+        if (percentage > 1)
+        {
+            for (int i = 0; i < cards.Length; i++)
+            {
+                cards[i].GetComponent<FruitCard>().enabled = true;
+            
+            } 
         }
+        
+        
         }
         
     }
