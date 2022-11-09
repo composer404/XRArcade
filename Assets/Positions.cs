@@ -7,11 +7,9 @@ using UnityEngine.Events;
 public class Positions : MonoBehaviour
 {
     [SerializeField] private UnityEvent timedEvent;
-    [SerializeField] private int seconds;
-    [SerializeField] private AnimationCurve curve;
-    private Quaternion startingPoint = Quaternion.Euler(-180, 0, 0);
     private float duration = 2f;
     private float elapsedTime;
+    private int someint=0;
     private Boolean rotate;
     private void Start()
     {
@@ -23,15 +21,15 @@ public class Positions : MonoBehaviour
     IEnumerator WaitForStart()
     {
         yield return new WaitForSeconds(5);
-        rotate = true;
-        timedEvent.Invoke();
+        RotateBack();
+        // timedEvent.Invoke();
     }
 
     public void AssignCardPositions()
     {
         for (int i = 0; i < cards.Length; i++)
         {
-            cards[i].GetComponent<FruitCard>().enabled = false;
+            //cards[i].GetComponent<FruitCard>().enabled = false;
             cards[i].transform.position = positions[i];
         }
     }
@@ -50,7 +48,7 @@ public class Positions : MonoBehaviour
     
     
     [SerializeField]
-    private GameObject[] cards;
+    public GameObject[] cards;
     
     
     private Vector3[] positions = new[]
@@ -74,33 +72,17 @@ public class Positions : MonoBehaviour
         new Vector3(8, -5, 0),
         new Vector3(12, -5, 0),
     };
-   
 
-    // Update is called once per frame
-    void Update()
+    void RotateBack()
     {
-        if (rotate)
-        {
-            
-        elapsedTime += Time.deltaTime;
-        float percentage = elapsedTime / duration;
         for (int i = 0; i < cards.Length; i++)
         {
-            cards[i].transform.rotation = Quaternion.Lerp(startingPoint, Quaternion.Euler(-180,180,0),curve.Evaluate(percentage));
-             
-       }
-
-        if (percentage > 1)
-        {
-            for (int i = 0; i < cards.Length; i++)
-            {
-                cards[i].GetComponent<FruitCard>().enabled = true;
+            cards[i].GetComponent<FruitCard>().RotateBack();
+                
             
-            } 
         }
-        
-        
-        }
-        
     }
+    
+    
+    
 }

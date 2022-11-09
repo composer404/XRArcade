@@ -210,6 +210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1001 &20140324
@@ -298,6 +303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: card2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
@@ -388,6 +398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1001 &142296242
@@ -477,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &202903112 stripped
@@ -497,13 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 4
 --- !u!114 &202903114
 MonoBehaviour:
@@ -671,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336e8748f5ee4564b8105589c2a535cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positions: {fileID: 312596399}
 --- !u!114 &312596398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,49 +743,6 @@ MonoBehaviour:
   timedEvent:
     m_PersistentCalls:
       m_Calls: []
-  seconds: 5
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.23530596
-      value: 0.25478232
-      inSlope: 1.6114745
-      outSlope: 1.6114745
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6643125
-      value: 0.8763884
-      inSlope: 0.81917846
-      outSlope: 0.81917846
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.019700365
-      outSlope: 0.019700365
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.2394368
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   cards:
   - {fileID: 379700553}
   - {fileID: 796216254}
@@ -891,13 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 3
 --- !u!114 &375265146
 MonoBehaviour:
@@ -1021,13 +989,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 3
 --- !u!114 &379700558
 MonoBehaviour:
@@ -1175,13 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 6
 --- !u!65 &410270945
 BoxCollider:
@@ -1440,13 +1398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 4
 --- !u!114 &451069861
 MonoBehaviour:
@@ -1570,13 +1523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 1
 --- !u!114 &452120575
 MonoBehaviour:
@@ -1834,13 +1782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 5
 --- !u!114 &605934442
 MonoBehaviour:
@@ -2033,6 +1976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1001 &613926246
@@ -2122,6 +2070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &682305171 stripped
@@ -2142,13 +2095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 9
 --- !u!114 &682305176
 MonoBehaviour:
@@ -2341,6 +2289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &796216254 stripped
@@ -2361,13 +2314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 2
 --- !u!114 &796216259
 MonoBehaviour:
@@ -2559,6 +2507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: card2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
@@ -2783,6 +2736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &1060900826 stripped
@@ -2803,13 +2761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 2
 --- !u!114 &1060900828
 MonoBehaviour:
@@ -2933,13 +2886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 7
 --- !u!114 &1193362345
 MonoBehaviour:
@@ -3132,6 +3080,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1001 &1360354171
@@ -3220,6 +3173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: card2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
@@ -3310,6 +3268,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1001 &1564317551
@@ -3399,6 +3362,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &1569133264 stripped
@@ -3419,13 +3387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 8
 --- !u!114 &1569133266
 MonoBehaviour:
@@ -3712,6 +3675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &1706215219 stripped
@@ -3732,13 +3700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 8
 --- !u!114 &1706215224
 MonoBehaviour:
@@ -3964,13 +3927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 6
 --- !u!114 &1771708164
 MonoBehaviour:
@@ -4118,13 +4076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 7
 --- !u!114 &1777111097
 MonoBehaviour:
@@ -4317,6 +4270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &1907336186 stripped
@@ -4337,13 +4295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 9
 --- !u!114 &1907336191
 MonoBehaviour:
@@ -4535,6 +4488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: card2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
@@ -4760,6 +4718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: card2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d32f9645d23eaa7489d4e69d23e508be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32f9645d23eaa7489d4e69d23e508be, type: 3}
 --- !u!1 &2087818862 stripped
@@ -4780,13 +4743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 5
 --- !u!114 &2087818867
 MonoBehaviour:
@@ -4990,13 +4948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66d92ae0db7ae2468420769380ea62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   checkCards: {fileID: 312596397}
+  elapsedTime: 0
   cardId: 1
 --- !u!65 &3469287838263809865
 BoxCollider:

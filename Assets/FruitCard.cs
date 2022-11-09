@@ -6,33 +6,35 @@ using UnityEngine.Events;
 
 public class FruitCard : MonoBehaviour
 {
-    private bool rotate=false;
+    private bool rotate;
+    private bool clicked;
    // [SerializeField] private UnityEvent checkCardId;
-    [SerializeField] private AnimationCurve curve;
-    private Quaternion startingPoint = Quaternion.Euler(-180, 0, 0);
-    private float duration = 5f;
+    private Quaternion startingPoint=Quaternion.Euler(-180,0,0) ;
+    private float duration = 2f;
     [SerializeField] private CheckCards checkCards;
-    private float elapsedTime=0;
-    private float percentage =0;
+    public float elapsedTime=0;
+    private float percentage ;
     private bool waitforStart;
-    [SerializeField] private  int cardId;
+    [SerializeField] public  int cardId;
     void Start()
     {
-        
+        rotate = true;
     }
   
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        percentage = elapsedTime / duration;
-        if (rotate)
+        
+            elapsedTime += Time.deltaTime;
+            percentage = elapsedTime / duration;
+            
+        
+        if (!rotate)
         {
-            transform.rotation = Quaternion.Lerp(startingPoint, Quaternion.Euler(-180,180,0),curve.Evaluate(percentage));
+            this.transform.rotation = Quaternion.Lerp(startingPoint, Quaternion.Euler(-180,180,0),percentage);
         }
         else
         { 
-            transform.rotation = Quaternion.Lerp(Quaternion.Euler(-180,180,0),startingPoint ,curve.Evaluate(percentage));
-            //rotate back unlock controls
+            this.transform.rotation = Quaternion.Lerp(Quaternion.Euler(-180,180,0),startingPoint ,percentage);
         }
     }
     
