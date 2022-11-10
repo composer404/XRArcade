@@ -2,9 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CheckCards : MonoBehaviour
 {
+    [SerializeField] private UnityEvent winning;
+    
     private int card1 = 0;
     private int card2 = 0;
     private int score = 0;
@@ -23,7 +28,8 @@ public class CheckCards : MonoBehaviour
             {
                 if (card1 == positions.cards[i].GetComponent<FruitCard>().cardId)
                 {
-                    positions.cards[i].GetComponent<FruitCard>().enabled = false;
+                    //positions.cards[i].GetComponent<FruitCard>().enabled = false;
+                    positions.cards[i].GetComponent<XRSimpleInteractable>().enabled = false;
                 }
             }
             
@@ -67,8 +73,19 @@ public class CheckCards : MonoBehaviour
     {
         if (score == 24/2)
         {
-            //winning screen
+            winning.Invoke();
         }
     }
-    
+
+    public void resetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene(0);//menu should be the first scene in order the script to work =D
+    }
+
+
 }

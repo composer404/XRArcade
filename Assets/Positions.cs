@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class Positions : MonoBehaviour
 {
-    [SerializeField] private UnityEvent timedEvent;
     private float duration = 2f;
     private float elapsedTime;
     private int someint=0;
