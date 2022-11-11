@@ -7,6 +7,9 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject memoryGameView;
 
+    [SerializeField]
+    private GameObject dartGameView;
+
     void Start()
     {
 
@@ -21,5 +24,10 @@ public class MenuController : MonoBehaviour
     public void StartMemoryGame()
     {
         this.memoryGameView.SetActive(true);
+    }
+
+    public void StartDartGame()
+    {
+       // this.dartGameView.SetActive(true);
     }
 }

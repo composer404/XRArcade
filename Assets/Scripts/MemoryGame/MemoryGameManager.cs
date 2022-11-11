@@ -45,6 +45,7 @@ public class MemoryGameManager : MonoBehaviour
 
     public void StartGame()
     {
+        print("Start Game");
         StopAllCoroutines();
         ClearGameState(true);
         StartRound();
