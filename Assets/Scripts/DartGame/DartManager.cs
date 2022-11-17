@@ -36,7 +36,7 @@ public class DartManager : MonoBehaviour
 
     void Update()
     {
-      UpdateTexts();
+     
     }
 
     public void StartGame()
@@ -53,11 +53,13 @@ public class DartManager : MonoBehaviour
     public void SubtractPoints(int subtractedPoints)
     {
       this.points -= subtractedPoints;
+      UpdateTexts();
+      print("Subtracted points XXX");
     }
 
     private void ClearGameState(bool restart)
     {
-        this.currentScoreText.SetText("0");
+        this.currentScoreText.SetText("501");
         if (restart)
         {
             this.startText.SetText("Restart");
@@ -83,14 +85,12 @@ public class DartManager : MonoBehaviour
 
     private void UpdateTexts()
     {
-        int currentScore = int.Parse(currentScoreText.text);
-        int newScore = currentScore + 1;
-        currentScoreText.SetText(newScore.ToString());
+        currentScoreText.SetText(points.ToString());
 
-        if (newScore > savedBestScore)
+        if (points < savedBestScore && points >= 0)
         {
-            PlayerPrefs.SetInt("DartGameBestScore", newScore);
-            bestScoreText.SetText(newScore.ToString());
+            PlayerPrefs.SetInt("DartGameBestScore", points);
+            bestScoreText.SetText(points.ToString());
         }
     }
 }
