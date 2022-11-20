@@ -28,6 +28,6 @@ public class MenuController : MonoBehaviour
 
     public void StartDartGame()
     {
-       // this.dartGameView.SetActive(true);
+       this.dartGameView.SetActive(true);
     }
 }
