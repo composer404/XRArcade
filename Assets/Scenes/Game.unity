@@ -2945,6 +2945,7 @@ MonoBehaviour:
   laNode: {fileID: 2005450483}
   siNode: {fileID: 229403203}
   dooNode: {fileID: 1388845251}
+  dartHit: {fileID: 0}
 --- !u!4 &579264698
 Transform:
   m_ObjectHideFlags: 0
@@ -7646,7 +7647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711705321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.177, y: 0, z: -0.013}
+  m_LocalPosition: {x: -0.177, y: 0.202, z: -0.185}
   m_LocalScale: {x: 0.95, y: 0.05, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
