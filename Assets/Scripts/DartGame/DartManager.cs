@@ -15,55 +15,79 @@ public class DartManager : MonoBehaviour
     [SerializeField]
     private GameObject startDart;
 
+    [SerializeField]
+    private GameObject trowsContainer;
+
+    [SerializeField]
+    private GameObject basket;
+
+    [SerializeField]
+    private GameObject dartPrefab;
+
     private TMP_Text bestScoreText;
     private TMP_Text currentScoreText;
     private TMP_Text startText;
 
-    private int savedBestScore;
+    private GameObject dartOne;
+    private GameObject dartTwo;
+    private GameObject dartThree;
 
+    private int savedBestScore;
     private int points;
 
     void Start()
     {
-      this.points = 501;
-      this.savedBestScore = PlayerPrefs.GetInt("DartGameBestScore");
-      this.currentScoreText = currentScore.GetComponent<TMP_Text>();
-      this.bestScoreText = bestScore.GetComponent<TMP_Text>();
-      this.startText = startDart.GetComponent<TMP_Text>();
+        this.points = 501;
+        this.savedBestScore = PlayerPrefs.GetInt("DartGameBestScore");
+        this.currentScoreText = currentScore.GetComponent<TMP_Text>();
+        this.bestScoreText = bestScore.GetComponent<TMP_Text>();
+        this.startText = startDart.GetComponent<TMP_Text>();
 
-      AssignDefultValues();
+        AssignDefultValues();
+    }
+
+    public void InitalLoad()
+    {
+        this.dartOne = Instantiate(dartPrefab, new Vector3(this.basket.transform.position.x - 0.1f, this.basket.transform.position.y, this.basket.transform.position.z), Quaternion.identity);
+        this.dartTwo = Instantiate(dartPrefab, this.basket.transform.position, Quaternion.identity);
+        this.dartThree = Instantiate(dartPrefab, new Vector3(this.basket.transform.position.x + 0.1f, this.basket.transform.position.y, this.basket.transform.position.z), Quaternion.identity);
+
+        this.dartOne.transform.SetParent(this.trowsContainer.transform);
+        this.dartTwo.transform.SetParent(this.trowsContainer.transform);
+        this.dartThree.transform.SetParent(this.trowsContainer.transform);
     }
 
     void Update()
     {
-      UpdateTexts();
+
     }
 
-    public void StartGame()
+    public void ResetGame()
     {
-      print("Start Game");
-      ClearGameState(true);
+        Destroy(dartOne);
+        Destroy(dartTwo);
+        Destroy(dartThree);
+
+        this.InitalLoad();
+        this.ClearGameState();
     }
 
     public void ResetPoints()
     {
-      this.points = 501;
+        this.points = 501;
     }
 
     public void SubtractPoints(int subtractedPoints)
     {
-      this.points -= subtractedPoints;
+        this.points -= subtractedPoints;
+        UpdateTexts();
+        print("Subtracted points XXX");
     }
 
-    private void ClearGameState(bool restart)
+    private void ClearGameState()
     {
-        this.currentScoreText.SetText("0");
-        if (restart)
-        {
-            this.startText.SetText("Restart");
-            return;
-        }
-        this.startText.SetText("Start");
+        this.currentScoreText.SetText("501");
+        this.points = 501;
     }
 
     private void AssignDefultValues()
@@ -83,14 +107,12 @@ public class DartManager : MonoBehaviour
 
     private void UpdateTexts()
     {
-        int currentScore = int.Parse(currentScoreText.text);
-        int newScore = currentScore + 1;
-        currentScoreText.SetText(newScore.ToString());
+        currentScoreText.SetText(points.ToString());
 
-        if (newScore > savedBestScore)
+        if (points < savedBestScore && points >= 0)
         {
-            PlayerPrefs.SetInt("DartGameBestScore", newScore);
-            bestScoreText.SetText(newScore.ToString());
+            PlayerPrefs.SetInt("DartGameBestScore", points);
+            bestScoreText.SetText(points.ToString());
         }
     }
 }

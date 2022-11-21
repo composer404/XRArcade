@@ -7,10 +7,12 @@ public class DartController : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
+    private DartManager dart;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.dart = GameObject.FindObjectOfType<DartManager>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,8 @@ public class DartController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) {
         if(other.tag == "DartBoard") {
+            int points = other.gameObject.GetComponent<ElementController>().GetScorePoints();
+            dart.SubtractPoints(points);
             rb.useGravity = false;
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
@@ -29,6 +33,7 @@ public class DartController : MonoBehaviour
             return;
         }
         rb.useGravity = true;
-        print("Dart collision");
+        print("Dart collision" + other.tag);
+        rb.isKinematic = false;
     }
 }
