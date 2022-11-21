@@ -25,6 +25,7 @@ public class MenuController : MonoBehaviour
     {
         this.HideAllGames();
         this.dartGameView.SetActive(true);
+        GameObject.FindObjectOfType<DartManager>().InitalLoad();
     }
 
     public void ShowMenu()

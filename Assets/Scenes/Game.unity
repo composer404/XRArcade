@@ -2588,7 +2588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Reset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6186,7 +6186,7 @@ PrefabInstance:
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0565
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
@@ -6237,6 +6237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Throw (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487058023515906443, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3, type: 3}
@@ -7713,10 +7718,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 121, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539985299
 MonoBehaviour:
@@ -9643,7 +9648,7 @@ GameObject:
   - component: {fileID: 657221832}
   - component: {fileID: 657221831}
   m_Layer: 0
-  m_Name: StartButton
+  m_Name: ResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9704,9 +9709,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: StartDartGame
+      - m_Target: {fileID: 1533450417}
+        m_TargetAssemblyTypeName: DartManager, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10677,10 +10682,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1221, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724286260
 MonoBehaviour:
@@ -11128,10 +11133,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 781, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771937208
 MonoBehaviour:
@@ -11348,7 +11353,7 @@ PrefabInstance:
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0565
+      value: -0.088
       objectReference: {fileID: 0}
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
@@ -11404,6 +11409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Throw (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487058023515906443, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3, type: 3}
@@ -11559,6 +11569,7 @@ GameObject:
   - component: {fileID: 801052998}
   - component: {fileID: 801053000}
   - component: {fileID: 801052999}
+  - component: {fileID: 801053001}
   m_Layer: 0
   m_Name: BasketStuff
   m_TagString: Untagged
@@ -11624,6 +11635,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &801053001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801052997}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62, y: 0.13, z: 0.61}
+  m_Center: {x: -0.06, y: 0.09, z: -0.76}
 --- !u!1 &841504036
 GameObject:
   m_ObjectHideFlags: 0
@@ -14411,10 +14435,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1441, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094123824
 MonoBehaviour:
@@ -16500,10 +16524,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 561, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206820933
 MonoBehaviour:
@@ -21138,6 +21162,10 @@ MonoBehaviour:
   currentScore: {fileID: 1855725494}
   bestScore: {fileID: 504806014}
   startDart: {fileID: 280206569}
+  trowsContainer: {fileID: 382072496}
+  basket: {fileID: 1347819284}
+  dartPrefab: {fileID: 8487058023515906443, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
+    type: 3}
 --- !u!114 &1533450418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25040,10 +25068,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 341, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868921752
 MonoBehaviour:
@@ -26873,12 +26901,12 @@ PrefabInstance:
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.18300003
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0565
+      value: -0.091
       objectReference: {fileID: 0}
     - target: {fileID: 7174493633723735590, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
@@ -26949,6 +26977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Throw
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487058023515906443, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8534555841896568952, guid: 3eaaa9085d7c2d4409598a9e2d8dc7d3,
         type: 3}
@@ -27209,10 +27242,10 @@ RectTransform:
   m_Father: {fileID: 1164409805}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1001, y: -75}
-  m_SizeDelta: {x: 210, y: 120}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121881695
 MonoBehaviour:
