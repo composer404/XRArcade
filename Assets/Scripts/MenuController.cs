@@ -16,7 +16,9 @@ public class MenuController : MonoBehaviour
     public void StartMemoryGame()
     {
         this.HideAllGames();
+
         this.memoryGameView.SetActive(true);
+        GameObject.FindObjectOfType<MemoryGameManager>().InitalLoad();
     }
 
     public void StartDartGame()

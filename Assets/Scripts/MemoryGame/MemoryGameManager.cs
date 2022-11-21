@@ -30,22 +30,26 @@ public class MemoryGameManager : MonoBehaviour
     private List<GameObject> currentRoundButtons = new List<GameObject>();
     private List<GameObject> userRoundButtons = new List<GameObject>();
 
-    void Start()
+    void Start() { }
+
+    public void InitalLoad()
     {
-        this.memoryButtons = GameObject.FindGameObjectsWithTag("MemoryButton");
+        if (this.memoryButtons == null)
+        {
+            this.memoryButtons = GameObject.FindGameObjectsWithTag("MemoryButton");
 
-        this.savedBestScore = PlayerPrefs.GetInt("MemoryGameBestScore");
-        this.currentScoreText = currentScore.GetComponent<TMP_Text>();
-        this.bestScoreText = bestScore.GetComponent<TMP_Text>();
-        this.startText = startLabel.GetComponent<TMP_Text>();
+            this.savedBestScore = PlayerPrefs.GetInt("MemoryGameBestScore");
+            this.currentScoreText = currentScore.GetComponent<TMP_Text>();
+            this.bestScoreText = bestScore.GetComponent<TMP_Text>();
+            this.startText = startLabel.GetComponent<TMP_Text>();
 
-        AssignDefultValues();
-        MapButtonsWithSounds();
+            AssignDefultValues();
+            MapButtonsWithSounds();
+        }
     }
 
     public void StartGame()
     {
-        print("Start Game");
         StopAllCoroutines();
         ClearGameState(true);
         StartRound();
