@@ -56,6 +56,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource dooNode;
 
+    [SerializeField]
+    private AudioSource dartHit;
+
 
     public void PlayDoNode()
     {
@@ -95,6 +98,11 @@ public class AudioManager : MonoBehaviour
     public void PlayDooNode()
     {
         dooNode.Play();
+    }
+
+    public void PlayDartHit()
+    {
+        dartHit.Play();
     }
 
     public AudioSource[] GetMemoryButtonSounds()
