@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Pipes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class FruitCard : MonoBehaviour
 {
@@ -12,12 +13,14 @@ public class FruitCard : MonoBehaviour
     private Quaternion startingPoint=Quaternion.Euler(-180,0,0) ;
     private float duration = 2f;
     [SerializeField] private CheckCards checkCards;
-    public float elapsedTime=0;
+    private float elapsedTime=0;
     private float percentage ;
     private bool waitforStart;
     [SerializeField] public  int cardId;
+    public int instanceID;
     void Start()
     {
+        instanceID = GetInstanceID();
         rotate = true;
     }
   
@@ -43,7 +46,8 @@ public class FruitCard : MonoBehaviour
         elapsedTime = 0;
         percentage = 0;
         rotate = true;
-        checkCards.check(cardId);
+        GetComponent<XRSimpleInteractable>().enabled = false;
+        checkCards.check(cardId,instanceID);
         
     }
     public void RotateBack()
@@ -51,6 +55,7 @@ public class FruitCard : MonoBehaviour
         percentage = 0;
         elapsedTime = 0;
         rotate = false;
-        
+        GetComponent<XRSimpleInteractable>().enabled = true;
+
     }
 }

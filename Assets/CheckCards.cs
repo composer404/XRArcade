@@ -11,7 +11,9 @@ public class CheckCards : MonoBehaviour
     [SerializeField] private UnityEvent winning;
     
     private int card1 = 0;
+    private int card1GameObjID = 0;
     private int card2 = 0;
+    private int card2GameObjID = 0;
     private int score = 0;
     [SerializeField]private Positions positions;
     
@@ -41,32 +43,40 @@ public class CheckCards : MonoBehaviour
         {
             for (int i = 0; i < positions.cards.Length; i++)
             {
-                if (card1 == positions.cards[i].GetComponent<FruitCard>().cardId || card2 == positions.cards[i].GetComponent<FruitCard>().cardId)
+                if (card1GameObjID == positions.cards[i].GetComponent<FruitCard>().instanceID || card2GameObjID == positions.cards[i].GetComponent<FruitCard>().instanceID)
                 {
-                    positions.cards[i].GetComponent<FruitCard>().RotateBack();
+                    positions.cards[i].GetComponent<XRSimpleInteractable>().enabled = false;
+                    StartCoroutine(WaitForStart(positions.cards[i].GetComponent<FruitCard>(),positions.cards[i].GetComponent<XRSimpleInteractable>()));
+                   
                 }
             }
             
-            //bad
-            // add a func to flip both back
             card1 = 0;
             card2 = 0;
             
-            
-            
         }
     }
-    public void check(int cardId)
+    
+    IEnumerator WaitForStart(FruitCard card,XRSimpleInteractable interactable)
     {
-        if (card1 == 0) {
+        yield return new WaitForSeconds(2);
+        card.RotateBack();
+        interactable.enabled = true;
+    }
+    public void check(int cardId,int gameObjId)
+    {
+        if (card1 == 0)
+        {
+            card1GameObjID = gameObjId;
             card1 = cardId;
         }
         else
         {
+            
+            card2GameObjID = gameObjId;
             card2 = cardId;
             checkBothIds();
         }
-        
     }
 
     public void checkScore()
