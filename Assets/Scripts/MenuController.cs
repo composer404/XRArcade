@@ -10,24 +10,30 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject dartGameView;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    [SerializeField]
+    private GameObject menuView;
 
     public void StartMemoryGame()
     {
+        this.HideAllGames();
         this.memoryGameView.SetActive(true);
     }
 
     public void StartDartGame()
     {
-       this.dartGameView.SetActive(true);
+        this.HideAllGames();
+        this.dartGameView.SetActive(true);
+    }
+
+    public void ShowMenu()
+    {
+        this.menuView.SetActive(true);
+    }
+
+    private void HideAllGames()
+    {
+        this.menuView.SetActive(false);
+        this.memoryGameView.SetActive(false);
+        this.dartGameView.SetActive(false);
     }
 }
