@@ -29,6 +29,8 @@ public class MenuController : MonoBehaviour
 
     public void ShowMenu()
     {
+        this.dartGameView.SetActive(false);
+        this.memoryGameView.SetActive(false);
         this.menuView.SetActive(true);
     }
 
