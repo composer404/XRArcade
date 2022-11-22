@@ -7,6 +7,7 @@ TagManager:
   - MemoryButton
   - DartBoard
   - Card
+  - CardGameView
   layers:
   - Default
   - TransparentFX

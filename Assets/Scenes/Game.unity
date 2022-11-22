@@ -10620,7 +10620,7 @@ GameObject:
   - component: {fileID: 683092219}
   m_Layer: 0
   m_Name: CardGameView
-  m_TagString: Untagged
+  m_TagString: CardGameView
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10712,7 +10712,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   scoreText: {fileID: 1984116953}
-  positions: {fileID: 0}
+  positions: {fileID: 683092220}
 --- !u!114 &683092220
 MonoBehaviour:
   m_ObjectHideFlags: 0
