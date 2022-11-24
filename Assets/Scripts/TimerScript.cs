@@ -8,10 +8,16 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     private float currentTime;
-    [SerializeField] private UnityEvent losing;
-    [SerializeField]private int startingTime;
 
-    [SerializeField] private TextMeshProUGUI  countdownText;
+    [SerializeField] 
+    private UnityEvent losing;
+
+    [SerializeField]
+    private int startingTime;
+
+    [SerializeField] 
+    private TextMeshProUGUI countdownText;
+
     // Start is called before the first frame update
     void Start()
     {
