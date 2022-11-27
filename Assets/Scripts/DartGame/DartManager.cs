@@ -48,6 +48,9 @@ public class DartManager : MonoBehaviour
 
     public void InitalLoad()
     {
+        Destroy(dartOne);
+        Destroy(dartTwo);
+        Destroy(dartThree);
         this.dartOne = Instantiate(dartPrefab, new Vector3(this.basket.transform.position.x - 0.1f, this.basket.transform.position.y, this.basket.transform.position.z), Quaternion.identity);
         this.dartTwo = Instantiate(dartPrefab, this.basket.transform.position, Quaternion.identity);
         this.dartThree = Instantiate(dartPrefab, new Vector3(this.basket.transform.position.x + 0.1f, this.basket.transform.position.y, this.basket.transform.position.z), Quaternion.identity);
